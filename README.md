@@ -58,6 +58,7 @@
         </ul>
         <div id="tab1" class="tab-content active">
             <p>Контактные данные
+                ![alt text](example.com/logo.png)
 <p>Директор:+7 990 077 2103
 <p>Отдел кадров +7 990 058 1933</p>
           </div>
