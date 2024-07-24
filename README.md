@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,11 +49,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <!-- Заголовок сайта -->
-        <h1></h1>
-<p><img src="/C:Users\User\Desktop\картинка2.jpg." width="300" height="200"><img src="/C:Users\User\Desktop\картинка2.png." width="1200" height="200">
-    </header>
     <main>
         <!-- Основное содержимое сайта -->
         <ul class="tabs">
