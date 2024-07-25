@@ -27,7 +27,15 @@
 </body>
 </html>
 <style>
-body {
+tabs {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+             overflow: hidden;
+    border: none;
+    background-color: #8FBC8F;
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
