@@ -1,174 +1,165 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
-    <style>
-       /* Базовый стиль для всего сайта */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFFFF0;
-        }
-        /* Стиль для вкладок */
-        .tabs {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-             overflow: hidden;
-    border: none;
-    background-color: #8FBC8F;
-        }
-        .tabs li {
-            flex: 1;
-            text-align: center;
-            border-bottom: 2px solid transparent;
-            cursor: pointer;
-            padding: 10px;
-        }
-        .tabs li.active {
-            border-bottom: 2px solid #007bff;
-        }
-        /* Стиль для контента вкладок */
-        .tab-content {
-            display: none;
-            padding: 20px;
-        }
-        .tab-content.active {
-            display: block;
-        }
-    </style>
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <!-- Основное содержимое сайта -->
-        <ul class="tabs">
-            <li class="active" data-tab="tab1">О нас</li>
-            <li data-tab="tab2">Жизнь школы</li>
-            <li data-tab="tab3">Новости</li>
-        </ul>
-        <div id="tab1" class="tab-content active">
-            <p>Контактные данные
-                ![alt text](example.com/logo.png)
-<p>Директор:+7 990 077 2103
-<p>Отдел кадров +7 990 058 1933</p>
-          </div>
-           <div id="tab2" class="tab-content">
-            <p></head>
-<body>
-<div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'Первый звонок 2024')" id="defaultOpen">Первый звонок 2024</button>
-    <button class="tablinks" onclick="openCity(event, 'Выпуск 2024')">Выпуск 2024</button>
-</div>
-
-<div id="Первый звонок 2024" class="tabcontent">
-    <h3>дзынь</h3>
-    <p>дзынь.</p>
-</div>
-
-<div id="Выпуск 2024" class="tabcontent">
-    <h3>(=(=(=</h3>
-    <p>Выпуск 2024</p>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h2>Home Page</h2>
+        <p>This is the home page content.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
 <style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-/* Стили для вкладки */
-.tab {
-    overflow: hidden;
-    border: none;
-    background-color: #f1f1f1;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
-/* Стили для кнопок вкладки */
-.tab button {
-    background-color: #f1f1f1;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: background-color 0.5s ease;
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
 }
-/* Стили для активной кнопки */
-.tab button.active {
-    background-color: #ccc;
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
 }
-/* Стили для контента вкладки */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
+nav a:hover {
+    background-color: #555;
 }
-/* Стили для активного контента вкладки */
-.tabcontent.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
+.content {
+    padding: 20px;
 }
-/* CSS-анимация для активного контента вкладки */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-/* Стили для изменения цвета кнопок при наведении */
-.tab button:hover {
-    background-color: #ddd;
-}
-/* Стили для активной кнопки при наведении */
-.tab button.active:hover {
-    background-color: #ccc;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 </style>
-<script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
-    // Открыть первую вкладку по умолчанию
-    document.getElementById("defaultOpen").click();
-</script>
-</div>
-</body></p>
-           <ul class="tabs">
-        </div>
-        <div id="tab3" class="tab-content">
-            <p>Контент вкладки 3</p>
-        </div>
-    </main>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <h1>About Us</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h2>About Us</h2>
+        <p>This is the about us page content.</p>
+    </div>
     <footer>
-        <!-- Нижняя часть сайта -->
-        <p>&copy; 2024  сайт  ГБУ ОО ЗО "Алексеевская СОШ"</p>
+        <p>&copy; 2024 My Website</p>
     </footer>
-    <script>
-        // JavaScript для управления вкладками
-        const tabs = document.querySelectorAll('.tabs li');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                const targetTab = tab.dataset.tab;
-                const targetContent = document.getElementById(targetTab);
-                tabs.forEach(tab => {
-                    tab.classList.remove('active');
-                });
-                tabContents.forEach(content => {
-                    content.classList.remove('active');
-                });
-                tab.classList.add('active');
-                targetContent.classList.add('active');
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <h1>Our Services</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h2>Services</h2>
+        <p>This is the services page content.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo">
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>This is the contact page content.</p>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+<script>
+// Simple script to highlight the current page in the navigation menu
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPath) {
+            link.style.backgroundColor = "#555";
+        }
+    });
+});
