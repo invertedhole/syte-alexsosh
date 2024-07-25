@@ -79,10 +79,11 @@ footer {
         <h1>About Us</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+          <ul class="tabs">
+            <li class="active" data-tab="tab1">О нас</li>
+            <li data-tab="tab2">Жизнь школы</li>
+            <li data-tab="tab3">Новости</li>
+        </ul>
     </nav>
     <div class="content">
         <h2>About Us</h2>
