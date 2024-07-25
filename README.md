@@ -75,7 +75,7 @@ footer {
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Logo">
+        <img src="images/logo.png" alt="Logo](https://raw.githubusercontent.com/invertedhole/ooalexsosh/main/картинка2.PNG">
         <h1>About Us</h1>
     </header>
     <nav>
