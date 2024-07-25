@@ -12,8 +12,6 @@
             padding: 0;
             background-color: #FFFFF0;
         }
-
-       
         /* Стиль для вкладок */
         .tabs {
             display: flex;
@@ -24,7 +22,6 @@
     border: none;
     background-color: #8FBC8F;
         }
-
         .tabs li {
             flex: 1;
             text-align: center;
@@ -32,17 +29,14 @@
             cursor: pointer;
             padding: 10px;
         }
-
         .tabs li.active {
             border-bottom: 2px solid #007bff;
         }
-
         /* Стиль для контента вкладок */
         .tab-content {
             display: none;
             padding: 20px;
         }
-
         .tab-content.active {
             display: block;
         }
@@ -65,7 +59,6 @@
            <div id="tab2" class="tab-content">
             <p></head>
 <body>
-
 <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'Первый звонок 2024')" id="defaultOpen">Первый звонок 2024</button>
     <button class="tablinks" onclick="openCity(event, 'Выпуск 2024')">Выпуск 2024</button>
@@ -85,14 +78,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
 /* Стили для вкладки */
 .tab {
     overflow: hidden;
     border: none;
     background-color: #f1f1f1;
 }
-
 /* Стили для кнопок вкладки */
 .tab button {
     background-color: #f1f1f1;
@@ -103,35 +94,29 @@ body {
     padding: 14px 16px;
     transition: background-color 0.5s ease;
 }
-
 /* Стили для активной кнопки */
 .tab button.active {
     background-color: #ccc;
 }
-
 /* Стили для контента вкладки */
 .tabcontent {
     display: none;
     padding: 6px 12px;
 }
-
 /* Стили для активного контента вкладки */
 .tabcontent.active {
     display: block;
     animation: fadeIn 0.5s ease;
 }
-
 /* CSS-анимация для активного контента вкладки */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
 /* Стили для изменения цвета кнопок при наведении */
 .tab button:hover {
     background-color: #ddd;
 }
-
 /* Стили для активной кнопки при наведении */
 .tab button.active:hover {
     background-color: #ccc;
@@ -151,7 +136,6 @@ body {
         document.getElementById(cityName).style.display = "block";
         evt.currentTarget.className += " active";
     }
-
     // Открыть первую вкладку по умолчанию
     document.getElementById("defaultOpen").click();
 </script>
@@ -167,25 +151,20 @@ body {
         <!-- Нижняя часть сайта -->
         <p>&copy; 2024  сайт  ГБУ ОО ЗО "Алексеевская СОШ"</p>
     </footer>
-
     <script>
         // JavaScript для управления вкладками
         const tabs = document.querySelectorAll('.tabs li');
         const tabContents = document.querySelectorAll('.tab-content');
-
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const targetTab = tab.dataset.tab;
                 const targetContent = document.getElementById(targetTab);
-
                 tabs.forEach(tab => {
                     tab.classList.remove('active');
                 });
-
                 tabContents.forEach(content => {
                     content.classList.remove('active');
                 });
-
                 tab.classList.add('active');
                 targetContent.classList.add('active');
             });
