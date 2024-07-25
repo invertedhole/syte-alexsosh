@@ -32,7 +32,23 @@ tabs {
             list-style: none;
             margin: 0;
             padding: 0;
-             overflow: hidden;
+        .tabs li {
+            flex: 1;
+            text-align: center;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .tabs li.active {
+            border-bottom: 2px solid #007bff;
+        }
+        /* Стиль для контента вкладок */
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+        .tab-content.active {
+            display: block;overflow: hidden;
     border: none;
     background-color: #8FBC8F;
     body {
