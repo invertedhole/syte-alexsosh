@@ -161,6 +161,21 @@ document.addEventListener("DOMContentLoaded", function () {
     navLinks.forEach(link => {
         if (link.getAttribute("href") === currentPath) {
             link.style.backgroundColor = "#555";
+         // JavaScript для управления вкладками
+        const tabs = document.querySelectorAll('.tabs li');
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const targetTab = tab.dataset.tab;
+                const targetContent = document.getElementById(targetTab);
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+                tab.classList.add('active');
+                targetContent.classList.add('active');
         }
     });
 });
