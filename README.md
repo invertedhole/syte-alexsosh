@@ -101,776 +101,110 @@
     </main>
       <script type="module">
           import { initializeApp } from 'firebase/app';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
-    authDomain: "alexsosh-7c608.firebaseapp.com",
-    databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
-    projectId: "alexsosh-7c608",
-    storageBucket: "alexsosh-7c608.appspot.com",
-    messagingSenderId: "540899168475",
-    appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
-    measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
- import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
-// TODO: Replace the following with your app's Firebase project configuration
-const firebaseConfig = {
- apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
- authDomain: "alexsosh-7c608.firebaseapp.com",
- databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
- projectId: "alexsosh-7c608",
- storageBucket: "alexsosh-7c608.appspot.com",
- messagingSenderId: "540899168475",
- appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
- measurementId: "G-S45K09RYXW"
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  };
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-};
- </script>
+          import { getAnalytics } from 'firebase/analytics';
+          import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+          const firebaseConfig = {
+            apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
+            authDomain: "alexsosh-7c608.firebaseapp.com",
+            databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
+            projectId: "alexsosh-7c608",
+            storageBucket: "alexsosh-7c608.appspot.com",
+            messagingSenderId: "540899168475",
+            appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
+            measurementId: "G-S45K09RYXW"
+          };
+          const app = initializeApp(firebaseConfig);
+          const analytics = getAnalytics(app);
+          // Остальной код здесь
+         addStudentForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (!currentUser || currentUser.role !== 'admin') {
+    alert('У вас нет прав для добавления оценки');
+    return;
+  }
+  const name = event.target.name.value.trim();
+  const grade = parseInt(event.target.grade.value.trim(), 10);
+  const studentsRef = collection(db, 'students');
+  const newStudentRef = addDoc(studentsRef, {
+    name: name,
+    grade: grade
+  });
+});
+// Обработчик событий для формы регистрации
+registerForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const username = event.target.username.value.trim();
+  const email = event.target.email.value.trim();
+  const password = event.target.password.value.trim();
+  if (users[username]) {
+    alert('Пользователь с таким именем уже существует');
+    return;
+  }
+  const isFirstUser = Object.keys(users).length === 0;
+  users[username] = { email: email, password: password, role: isFirstUser ? 'admin' : 'user' };
+  const usersRef = collection(db, 'users');
+  const newUserRef = addDoc(usersRef, {
+    username: username,
+    email: email,
+    password: password,
+    role: users[username].role
+  });
+});
+// Обработчик событий для формы входа
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const username = event.target.username.value.trim();
+  const password = event.target.password.value.trim();
+  if (!users[username] || users[username].password !== password) {
+    alert('Неверное имя пользователя или пароль');
+    return;
+  }
+  currentUser = { username: username, role: users[username].role };
+  const usersRef = collection(db, 'users');
+  const userRef = query(usersRef, where("username", "==", username), limit(1));
+  getDocs(userRef).then(function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+      const userData = childSnapshot.data();
+      currentUser = { username: userData.username, role: userData.role };
+    });
+    updateUI();
+    alert('Вход выполнен');
+  });
+});
+// Обновление таблицы с использованием данных students из Firestore
+const studentsRef = collection(db, 'students');
+const q = query(studentsRef);
+const unsubscribe = onSnapshot(q, function(snapshot) {
+  let tableHtml = '';
+  snapshot.forEach(function(doc) {
+    const student = doc.data();
+    tableHtml += `<tr><td>${student.name}</td><td>${student.grade}</td></tr>`;
+  });
+  studentsTable.innerHTML = tableHtml;
+});
+// Обновление UI с использованием данных users из Firestore
+const usersRef = collection(db, 'users');
+const q = query(usersRef);
+const unsubscribe = onSnapshot(q, function(snapshot) {
+  snapshot.forEach(function(doc) {
+    const user = doc.data();
+    if (user.username === currentUser.username) {
+      currentUser = { username: user.username, role: user.role };
+      break;
+    }
+  });
+  updateUI();
+});
+function updateUI() {
+  if (currentUser) {
+    authForms.style.display = 'none';
+    addStudentForm.style.display = currentUser.role === 'admin' ? 'flex' : 'none';
+  } else {
+    authForms.style.display = 'block';
+    addStudentForm.style.display = 'none';
+  }
+}
+       </script>
+    </body>
+</html>
+      
