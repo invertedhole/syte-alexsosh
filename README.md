@@ -115,6 +115,7 @@
           };
           const app = initializeApp(firebaseConfig);
           const analytics = getAnalytics(app);
+          const users = {}; // Добавление объекта для хранения пользователей
           // Остальной код здесь
          addStudentForm.addEventListener('submit', function(event) {
   event.preventDefault();
