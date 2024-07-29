@@ -102,7 +102,7 @@
       <script type="module">
           import { initializeApp } from 'firebase/app';
           import { getAnalytics } from 'firebase/analytics';
-          import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+          import { getFirestore, collection, getDocs, addDoc, query, onSnapshot } from 'firebase/firestore/lite';
           const firebaseConfig = {
             apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
             authDomain: "alexsosh-7c608.firebaseapp.com",
@@ -171,7 +171,7 @@ loginForm.addEventListener('submit', function(event) {
     alert('Вход выполнен');
   });
 });
-// Обновление таблицы с использованием данных students из Firestore
+// Обновление таблицы с учениками
 const studentsRef = collection(db, 'students');
 const q = query(studentsRef);
 const unsubscribe = onSnapshot(q, function(snapshot) {
@@ -182,7 +182,7 @@ const unsubscribe = onSnapshot(q, function(snapshot) {
   });
   studentsTable.innerHTML = tableHtml;
 });
-// Обновление UI с использованием данных users из Firestore
+// Обновление данных пользователя из Firestore
 const usersRef = collection(db, 'users');
 const q = query(usersRef);
 const unsubscribe = onSnapshot(q, function(snapshot) {
@@ -207,4 +207,3 @@ function updateUI() {
        </script>
     </body>
 </html>
-      
