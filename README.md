@@ -64,6 +64,7 @@
         <div id="authForms">
             <h2>Регистрация</h2>
             <form id="registerForm">
+                <label for="regUsername">Имя пользователя:</label>
                 <input type="text" id="regUsername" name="username" required>
                 <label for="regEmail">Email:</label>
                 <input type="email" id="regEmail" name="email" required>
@@ -73,6 +74,7 @@
             </form>
             <h2>Вход</h2>
             <form id="loginForm">
+                <label for="loginUsername">Имя пользователя:</label>
                 <input type="text" id="loginUsername" name="username" required>
                 <label for="loginPassword">Пароль:</label>
                 <input type="password" id="loginPassword" name="password" required>
@@ -105,6 +107,7 @@
         const loginForm = document.getElementById('loginForm');
         const authForms = document.getElementById('authForms');
         const studentsTable = document.getElementById('studentsTable').querySelector('tbody');
+        // Load users and students from localStorage
         const users = JSON.parse(localStorage.getItem('users')) || {};
         let currentUser = null;
         function updateUI() {
@@ -143,8 +146,8 @@
             const isFirstUser = Object.keys(users).length === 0;
             users[username] = { email, password, role: isFirstUser ? 'admin' : 'user' };
             localStorage.setItem('users', JSON.stringify(users));
-            updateUI();
             alert('Регистрация выполнена');
+            updateUI();
         });
         loginForm.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -155,8 +158,8 @@
                 return;
             }
             currentUser = { username, role: users[username].role };
-            updateUI();
             alert('Вход выполнен');
+            updateUI();
         });
         addStudentForm.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -172,8 +175,9 @@
             localStorage.setItem('students', JSON.stringify(students));
             updateUI();
         });
-        // Инициализация при загрузке страницы
+        // Initialize UI on page load
         updateUI();
     </script>
 </body>
 </html>
+
