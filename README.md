@@ -99,74 +99,81 @@
             <input type="submit" value="Добавить">
         </form>
     </main>
-      <script type="module">
-          const addStudentForm = document.getElementById('addStudentForm'); // Добавьте эту строку
-// Ваш текущий код JavaScript здесь
-const users = JSON.parse(localStorage.getItem('users')) || {};
-let currentUser = null;
-         const users = JSON.parse(localStorage.getItem('users')) || {}; // Добавление объекта для хранения пользователей
-let currentUser = null;
-// Остальной код здесь
-addStudentForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-  if (!currentUser || currentUser.role !== 'admin') {
-    alert('У вас нет прав для добавления оценки');
-    return;
-  }
-  const name = event.target.name.value.trim();
-  const grade = parseInt(event.target.grade.value.trim(), 10);
-  const students = JSON.parse(localStorage.getItem('students')) || [];
-  const newStudent = { name, grade };
-  students.push(newStudent);
-  localStorage.setItem('students', JSON.stringify(students));
-  updateUI();
-});
-// Обработчик событий для формы регистрации
-registerForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-  const username = event.target.username.value.trim();
-  const email = event.target.email.value.trim();
-  const password = event.target.password.value.trim();
-  if (users[username]) {
-    alert('Пользователь с таким именем уже существует');
-    return;
-  }
-  const isFirstUser = Object.keys(users).length === 0;
-  users[username] = { email, password, role: isFirstUser ? 'admin' : 'user' };
-  localStorage.setItem('users', JSON.stringify(users));
-  updateUI();
-});
-// Обработчик событий для формы входа
-loginForm.addEventListener('submit', function(event) {
-  event.preventDefault();
-  const username = event.target.username.value.trim();
-  const password = event.target.password.value.trim();
-  if (!users[username] || users[username].password !== password) {
-    alert('Неверное имя пользователя или пароль');
-    return;
-  }
-  currentUser = { username, role: users[username].role };
-  updateUI();
-  alert('Вход выполнен');
-});
-// Обновление таблицы с учениками
-const students = JSON.parse(localStorage.getItem('students')) || [];
-let tableHtml = '';
-students.forEach(function(student) {
-  tableHtml += `<tr><td>${student.name}</td><td>${student.grade}</td></tr>`;
-});
-studentsTable.innerHTML = tableHtml;
-// Обновление данных пользователя из LocalStorage
-const users = JSON.parse(localStorage.getItem('users')) || {};
-function updateUI() {
-  if (currentUser) {
-    authForms.style.display = 'none';
-    addStudentForm.style.display = currentUser.role === 'admin' ? 'flex' : 'none';
-  } else {
-    authForms.style.display = 'block';
-    addStudentForm.style.display = 'none';
-  }
-}
-       </script>
-    </body>
+    <script type="module">
+        const addStudentForm = document.getElementById('addStudentForm');
+        const registerForm = document.getElementById('registerForm');
+        const loginForm = document.getElementById('loginForm');
+        const authForms = document.getElementById('authForms');
+        const studentsTable = document.getElementById('studentsTable').querySelector('tbody');
+        const users = JSON.parse(localStorage.getItem('users')) || {};
+        let currentUser = null;
+        function updateUI() {
+            if (currentUser) {
+                authForms.style.display = 'none';
+                addStudentForm.style.display = currentUser.role === 'admin' ? 'flex' : 'none';
+            } else {
+                authForms.style.display = 'block';
+                addStudentForm.style.display = 'none';
+            }
+            updateStudentTable();
+        }
+        function updateStudentTable() {
+            const students = JSON.parse(localStorage.getItem('students')) || [];
+            studentsTable.innerHTML = '';
+            students.forEach(student => {
+                const row = document.createElement('tr');
+                const nameCell = document.createElement('td');
+                const gradeCell = document.createElement('td');
+                nameCell.textContent = student.name;
+                gradeCell.textContent = student.grade;
+                row.appendChild(nameCell);
+                row.appendChild(gradeCell);
+                studentsTable.appendChild(row);
+            });
+        }
+        registerForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = event.target.username.value.trim();
+            const email = event.target.email.value.trim();
+            const password = event.target.password.value.trim();
+            if (users[username]) {
+                alert('Пользователь с таким именем уже существует');
+                return;
+            }
+            const isFirstUser = Object.keys(users).length === 0;
+            users[username] = { email, password, role: isFirstUser ? 'admin' : 'user' };
+            localStorage.setItem('users', JSON.stringify(users));
+            updateUI();
+            alert('Регистрация выполнена');
+        });
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = event.target.username.value.trim();
+            const password = event.target.password.value.trim();
+            if (!users[username] || users[username].password !== password) {
+                alert('Неверное имя пользователя или пароль');
+                return;
+            }
+            currentUser = { username, role: users[username].role };
+            updateUI();
+            alert('Вход выполнен');
+        });
+        addStudentForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (!currentUser || currentUser.role !== 'admin') {
+                alert('У вас нет прав для добавления оценки');
+                return;
+            }
+            const name = event.target.name.value.trim();
+            const grade = parseInt(event.target.grade.value.trim(), 10);
+            const students = JSON.parse(localStorage.getItem('students')) || [];
+            const newStudent = { name, grade };
+            students.push(newStudent);
+            localStorage.setItem('students', JSON.stringify(students));
+            updateUI();
+        });
+        // Инициализация при загрузке страницы
+        updateUI();
+    </script>
+</body>
 </html>
