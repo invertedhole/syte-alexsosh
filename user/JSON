@@ -1,0 +1,11 @@
+
+{
+  "users": {
+    "user1": { "email": "user1@example.com", "password": "password1", "role": "admin" },
+    "user2": { "email": "user2@example.com", "password": "password2", "role": "user" }
+  }
+}
+[
+  { "name": "John", "grade": 4 },
+  { "name": "Alice", "grade": 5 }
+]
