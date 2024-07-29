@@ -100,10 +100,10 @@
         </form>
     </main>
       <script type="module">
-          const users = JSON.parse(localStorage.getItem('users')) || {}; // Добавление объекта для хранения пользователей
-          let currentUser = null;
-          // Остальной код здесь
-         addStudentForm.addEventListener('submit', function(event) {
+         const users = JSON.parse(localStorage.getItem('users')) || {}; // Добавление объекта для хранения пользователей
+let currentUser = null;
+// Остальной код здесь
+addStudentForm.addEventListener('submit', function(event) {
   event.preventDefault();
   if (!currentUser || currentUser.role !== 'admin') {
     alert('У вас нет прав для добавления оценки');
