@@ -100,22 +100,8 @@
         </form>
     </main>
       <script type="module">
-          import { initializeApp } from 'firebase/app';
-          import { getAnalytics } from 'firebase/analytics';
-          import { getFirestore, collection, getDocs, addDoc, query, onSnapshot } from 'firebase/firestore/lite';
-          const firebaseConfig = {
-            apiKey: "AIzaSyAVy1BVdsVnRkIQB6xRG00f6pmd9WNo97U",
-            authDomain: "alexsosh-7c608.firebaseapp.com",
-            databaseURL: "https://alexsosh-7c608-default-rtdb.firebaseio.com",
-            projectId: "alexsosh-7c608",
-            storageBucket: "alexsosh-7c608.appspot.com",
-            messagingSenderId: "540899168475",
-            appId: "1:540899168475:web:afbeabde1bf0b106dcbcfe",
-            measurementId: "G-S45K09RYXW"
-          };
-          const app = initializeApp(firebaseConfig);
-          const analytics = getAnalytics(app);
-          const users = {}; // Добавление объекта для хранения пользователей
+          const users = JSON.parse(localStorage.getItem('users')) || {}; // Добавление объекта для хранения пользователей
+          let currentUser = null;
           // Остальной код здесь
          addStudentForm.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -125,11 +111,11 @@
   }
   const name = event.target.name.value.trim();
   const grade = parseInt(event.target.grade.value.trim(), 10);
-  const studentsRef = collection(db, 'students');
-  const newStudentRef = addDoc(studentsRef, {
-    name: name,
-    grade: grade
-  });
+  const students = JSON.parse(localStorage.getItem('students')) || [];
+  const newStudent = { name, grade };
+  students.push(newStudent);
+  localStorage.setItem('students', JSON.stringify(students));
+  updateUI();
 });
 // Обработчик событий для формы регистрации
 registerForm.addEventListener('submit', function(event) {
@@ -142,14 +128,9 @@ registerForm.addEventListener('submit', function(event) {
     return;
   }
   const isFirstUser = Object.keys(users).length === 0;
-  users[username] = { email: email, password: password, role: isFirstUser ? 'admin' : 'user' };
-  const usersRef = collection(db, 'users');
-  const newUserRef = addDoc(usersRef, {
-    username: username,
-    email: email,
-    password: password,
-    role: users[username].role
-  });
+  users[username] = { email, password, role: isFirstUser ? 'admin' : 'user' };
+  localStorage.setItem('users', JSON.stringify(users));
+  updateUI();
 });
 // Обработчик событий для формы входа
 loginForm.addEventListener('submit', function(event) {
@@ -160,42 +141,19 @@ loginForm.addEventListener('submit', function(event) {
     alert('Неверное имя пользователя или пароль');
     return;
   }
-  currentUser = { username: username, role: users[username].role };
-  const usersRef = collection(db, 'users');
-  const userRef = query(usersRef, where("username", "==", username), limit(1));
-  getDocs(userRef).then(function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-      const userData = childSnapshot.data();
-      currentUser = { username: userData.username, role: userData.role };
-    });
-    updateUI();
-    alert('Вход выполнен');
-  });
+  currentUser = { username, role: users[username].role };
+  updateUI();
+  alert('Вход выполнен');
 });
 // Обновление таблицы с учениками
-const studentsRef = collection(db, 'students');
-const q = query(studentsRef);
-const unsubscribe = onSnapshot(q, function(snapshot) {
-  let tableHtml = '';
-  snapshot.forEach(function(doc) {
-    const student = doc.data();
-    tableHtml += `<tr><td>${student.name}</td><td>${student.grade}</td></tr>`;
-  });
-  studentsTable.innerHTML = tableHtml;
+const students = JSON.parse(localStorage.getItem('students')) || [];
+let tableHtml = '';
+students.forEach(function(student) {
+  tableHtml += `<tr><td>${student.name}</td><td>${student.grade}</td></tr>`;
 });
-// Обновление данных пользователя из Firestore
-const usersRef = collection(db, 'users');
-const q = query(usersRef);
-const unsubscribe = onSnapshot(q, function(snapshot) {
-  snapshot.forEach(function(doc) {
-    const user = doc.data();
-    if (user.username === currentUser.username) {
-      currentUser = { username: user.username, role: user.role };
-      break;
-    }
-  });
-  updateUI();
-});
+studentsTable.innerHTML = tableHtml;
+// Обновление данных пользователя из LocalStorage
+const users = JSON.parse(localStorage.getItem('users')) || {};
 function updateUI() {
   if (currentUser) {
     authForms.style.display = 'none';
