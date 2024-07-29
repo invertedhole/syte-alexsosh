@@ -100,6 +100,10 @@
         </form>
     </main>
       <script type="module">
+          const addStudentForm = document.getElementById('addStudentForm'); // Добавьте эту строку
+// Ваш текущий код JavaScript здесь
+const users = JSON.parse(localStorage.getItem('users')) || {};
+let currentUser = null;
          const users = JSON.parse(localStorage.getItem('users')) || {}; // Добавление объекта для хранения пользователей
 let currentUser = null;
 // Остальной код здесь
