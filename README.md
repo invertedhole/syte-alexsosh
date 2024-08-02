@@ -101,83 +101,110 @@
             <input type="submit" value="Добавить">
         </form>
     </main>
-    <script type="module">
-        const addStudentForm = document.getElementById('addStudentForm');
-        const registerForm = document.getElementById('registerForm');
-        const loginForm = document.getElementById('loginForm');
-        const authForms = document.getElementById('authForms');
-        const studentsTable = document.getElementById('studentsTable').querySelector('tbody');
-        // Load users and students from localStorage
-        const users = JSON.parse(localStorage.getItem('users')) || {};
-        let currentUser = null;
-        function updateUI() {
-            if (currentUser) {
-                authForms.style.display = 'none';
-                addStudentForm.style.display = currentUser.role === 'admin' ? 'flex' : 'none';
-            } else {
-                authForms.style.display = 'block';
-                addStudentForm.style.display = 'none';
-            }
-            updateStudentTable();
+   <script type="module">
+    // Import the functions you need from the SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js";
+    import { getFirestore, collection, addDoc, getDocs, query, where } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA6lScjtjt5q2tIPtS7oOfpfFTNUzcP_Vw",
+ authDomain: "user-1bfb3.firebaseapp.com",
+ databaseURL: "https://user-1bfb3-default-rtdb.europe-west1.firebasedatabase.app",
+ ProjectID: "user-1bfb3",
+ Корзина для хранения: "user-1bfb3.appspot.com",
+ messagingSenderId: "202312075024",
+ AppID: "1:202312075024: web: 15751f1725984416354795",
+ Идентификатор измерения: "G-N6R5HHDR7E"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const db = getFirestore(app);
+    const registerForm = document.getElementById('registerForm');
+    const loginForm = document.getElementById('loginForm');
+    const addStudentForm = document.getElementById('addStudentForm');
+    const authForms = document.getElementById('authForms');
+    const studentsTable = document.getElementById('studentsTable').querySelector('tbody');
+    let currentUser = null;
+    async function updateUI() {
+        if (currentUser) {
+            authForms.style.display = 'none';
+            addStudentForm.style.display = currentUser.role === 'admin' ? 'flex' : 'none';
+        } else {
+            authForms.style.display = 'block';
+            addStudentForm.style.display = 'none';
         }
-        function updateStudentTable() {
-            const students = JSON.parse(localStorage.getItem('students')) || [];
-            studentsTable.innerHTML = '';
-            students.forEach(student => {
-                const row = document.createElement('tr');
-                const nameCell = document.createElement('td');
-                const gradeCell = document.createElement('td');
-                nameCell.textContent = student.name;
-                gradeCell.textContent = student.grade;
-                row.appendChild(nameCell);
-                row.appendChild(gradeCell);
-                studentsTable.appendChild(row);
-            });
-        }
-        registerForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = event.target.username.value.trim();
-            const email = event.target.email.value.trim();
-            const password = event.target.password.value.trim();
-            if (users[username]) {
-                alert('Пользователь с таким именем уже существует');
-                return;
-            }
-            const isFirstUser = Object.keys(users).length === 0;
-            users[username] = { email, password, role: isFirstUser ? 'admin' : 'user' };
-            localStorage.setItem('users', JSON.stringify(users));
-            alert('Регистрация выполнена');
-            updateUI();
+        await updateStudentTable();
+    }
+    async function updateStudentTable() {
+        const studentsCol = collection(db, 'students');
+        const studentSnapshot = await getDocs(studentsCol);
+        const studentsList = studentSnapshot.docs.map(doc => doc.data()); 
+        studentsTable.innerHTML = '';
+        studentsList.forEach(student => {
+            const row = document.createElement('tr');
+            const nameCell = document.createElement('td');
+            const gradeCell = document.createElement('td');
+            nameCell.textContent = student.name;
+            gradeCell.textContent = student.grade;
+            row.appendChild(nameCell);
+            row.appendChild(gradeCell);
+            studentsTable.appendChild(row);
         });
-        loginForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            const username = event.target.username.value.trim();
-            const password = event.target.password.value.trim();
-            if (!users[username] || users[username].password !== password) {
+    }
+    registerForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const username = event.target.username.value.trim();
+        const email = event.target.email.value.trim();
+        const password = event.target.password.value.trim();
+        try {
+            await createUserWithEmailAndPassword(auth, email, password);
+            const isFirstUser = (await getDocs(collection(db, 'users'))).empty;
+            await addDoc(collection(db, 'users'), { username, email, role: isFirstUser ? 'admin' : 'user' });
+            alert('Регистрация выполнена');
+            currentUser = { username, role: isFirstUser ? 'admin' : 'user' };
+            updateUI();
+        } catch (error) {
+            alert(`Ошибка регистрации: ${error.message}`);
+        }
+    });
+    loginForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const username = event.target.username.value.trim();
+        const password = event.target.password.value.trim();
+        try {
+            await signInWithEmailAndPassword(auth, username, password);
+            const userQuery = query(collection(db, 'users'), where('username', '==', username));
+            const querySnapshot = await getDocs(userQuery);
+            if (querySnapshot.empty) {
                 alert('Неверное имя пользователя или пароль');
                 return;
             }
-            currentUser = { username, role: users[username].role };
+            const userData = querySnapshot.docs[0].data();
+            currentUser = { username, role: userData.role };
             alert('Вход выполнен');
             updateUI();
-        });
-        addStudentForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            if (!currentUser || currentUser.role !== 'admin') {
-                alert('У вас нет прав для добавления оценки');
-                return;
-            }
-            const name = event.target.name.value.trim();
-            const grade = parseInt(event.target.grade.value.trim(), 10);
-            const students = JSON.parse(localStorage.getItem('students')) || [];
-            const newStudent = { name, grade };
-            students.push(newStudent);
-            localStorage.setItem('students', JSON.stringify(students));
-            updateUI();
-        });
-        // Initialize UI on page load
-        updateUI();
-    </script>
-</body>
-</html>
-
+        } catch (error) {
+            alert(`Ошибка входа: ${error.message}`);
+        }
+    });
+    addStudentForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        if (!currentUser || currentUser.role !== 'admin') {
+            alert('У вас нет прав для добавления оценки');
+            return;
+        }
+        const name = event.target.name.value.trim();
+        const grade = parseInt(event.target.grade.value.trim(), 10);
+        try {
+            await addDoc(collection(db, 'students'), { name, grade });
+            alert('Оценка добавлена');
+            await updateStudentTable();
+        } catch (error) {
+            alert(`Ошибка добавления оценки: ${error.message}`);
+        }
+    });
+    // Initialize UI on page load
+    updateUI();
+</script>
