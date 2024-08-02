@@ -112,7 +112,9 @@
  authDomain: "user-1bfb3.firebaseapp.com",
  databaseURL: "https://user-1bfb3-default-rtdb.europe-west1.firebasedatabase.app",
  ProjectID: "user-1bfb3",
- Корзина для хранения: "user-1bfb3.appspot.com",
+ Корзина для хранения: "[user-1bfb3.appspot.com](https://alexsosh-7c608-default-rtdb.firebaseio.com/
+:
+null)",
  messagingSenderId: "202312075024",
  AppID: "1:202312075024: web: 15751f1725984416354795",
  Идентификатор измерения: "G-N6R5HHDR7E"
